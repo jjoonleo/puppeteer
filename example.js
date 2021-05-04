@@ -39,6 +39,6 @@ const puppeteer = require('puppeteer-core');
   await page.waitForTimeout(1000);
   await page.click("#survey_q3a1");
   await page.click("#btnConfirm");
-  await page.screenshot({path: 'example.png'});
+  //await page.screenshot({path: 'example.png'});
   await browser.close();
 })();
