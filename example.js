@@ -35,7 +35,7 @@ const puppeteer = require('puppeteer-core');
   await page.waitForTimeout(1000);
   await page.click("#survey_q1a1");
   await page.waitForTimeout(1000);
-  await page.click("#survey_q2a1");
+  await page.click("#survey_q2a2");
   await page.waitForTimeout(1000);
   await page.click("#survey_q3a2");
   await page.click("#btnConfirm");
