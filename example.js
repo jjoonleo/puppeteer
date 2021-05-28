@@ -32,14 +32,17 @@ var members = { "members":[
   await page.waitForTimeout(100);
   await page.mouse.click(320,530 ,{ button: 'left' });
   await page.waitForTimeout(100);
-  await page.type('#user_name_input',"박이준",{ delay: 100 });
-  await page.type('#birthday_input',"050728",{ delay: 100 });
+  //choosing school
+
+  await page.type('#user_name_input',members[members][0][name],{ delay: 100 }); //enter name
+  await page.type('#birthday_input',members[members][0][birthday],{ delay: 100 });  //enter birthday
   await page.click('#btnConfirm');
 
   await page.mouse.move(400, 200);await page.waitForTimeout(100);
   await page.type('#WriteInfoForm > table > tbody > tr > td > input','',{ delay: 100 });
-  await page.type('#WriteInfoForm > table > tbody > tr > td > input','6433',{ delay: 100 });
-  
+  await page.type('#WriteInfoForm > table > tbody > tr > td > input',members[members][0][password],{ delay: 100 });
+  // enter password
+
   await page.waitForTimeout(100);
   await page.click('#btnConfirm');
   await page.waitForTimeout(1000);
