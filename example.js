@@ -1,5 +1,18 @@
 const puppeteer = require('puppeteer-core');
 
+var members = { "members":[
+   {
+      "name": "박이준",
+      "birthday": "050728",
+      "password": "6433",
+   },
+   {
+      "name": "전무진",
+      "birthday": "050616",
+      "password": "1004",
+   }
+]};
+
 (async () => {
   const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium-browser' });
   const page = await browser.newPage();
