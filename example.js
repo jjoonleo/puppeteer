@@ -14,7 +14,7 @@ var members = [
 ];
 
 console.log(members[0]['name']);
-for(int i = 0; i < 2; i++){
+for(let i = 0; i < 2; i++){
 (async () => {
   const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium-browser' });
   const page = await browser.newPage();
