@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer-core');
 
-var members = { "members":[
+var members = { 
    {
       "name": "박이준",
       "birthday": "050728",
@@ -11,7 +11,7 @@ var members = { "members":[
       "birthday": "050616",
       "password": "1004",
    }
-]};
+};
 
 console.log(members[0][name]);
 
