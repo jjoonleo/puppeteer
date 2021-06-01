@@ -14,7 +14,7 @@ var members = [
 ];
 
 console.log(members[0]['name']);
-
+for(int i = 0; i < 2; i++){
 (async () => {
   const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium-browser' });
   const page = await browser.newPage();
@@ -36,13 +36,13 @@ console.log(members[0]['name']);
   await page.waitForTimeout(100);
   //choosing school
 
-  await page.type('#user_name_input',members[0]['name'],{ delay: 100 }); //enter name
-  await page.type('#birthday_input',members[0][birthday],{ delay: 100 });  //enter birthday
+  await page.type('#user_name_input',members[i]['name'],{ delay: 100 }); //enter name
+  await page.type('#birthday_input',members[i]['birthday'],{ delay: 100 });  //enter birthday
   await page.click('#btnConfirm');
 
   await page.mouse.move(400, 200);await page.waitForTimeout(100);
   await page.type('#WriteInfoForm > table > tbody > tr > td > input','',{ delay: 100 });
-  await page.type('#WriteInfoForm > table > tbody > tr > td > input',members[0][password],{ delay: 100 });
+  await page.type('#WriteInfoForm > table > tbody > tr > td > input',members[i]['password'],{ delay: 100 });
   // enter password
 
   await page.waitForTimeout(100);
@@ -60,3 +60,4 @@ console.log(members[0]['name']);
   //await page.screenshot({path: 'example.png'});
   await browser.close();
 })();
+}
