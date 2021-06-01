@@ -13,6 +13,8 @@ var members = { "members":[
    }
 ]};
 
+console.log(members[0][name]);
+
 (async () => {
   const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium-browser' });
   const page = await browser.newPage();
@@ -34,13 +36,13 @@ var members = { "members":[
   await page.waitForTimeout(100);
   //choosing school
 
-  await page.type('#user_name_input',members[members][0][name],{ delay: 100 }); //enter name
-  await page.type('#birthday_input',members[members][0][birthday],{ delay: 100 });  //enter birthday
+  await page.type('#user_name_input',members[0][name],{ delay: 100 }); //enter name
+  await page.type('#birthday_input',members[0][birthday],{ delay: 100 });  //enter birthday
   await page.click('#btnConfirm');
 
   await page.mouse.move(400, 200);await page.waitForTimeout(100);
   await page.type('#WriteInfoForm > table > tbody > tr > td > input','',{ delay: 100 });
-  await page.type('#WriteInfoForm > table > tbody > tr > td > input',members[members][0][password],{ delay: 100 });
+  await page.type('#WriteInfoForm > table > tbody > tr > td > input',members[0][password],{ delay: 100 });
   // enter password
 
   await page.waitForTimeout(100);
