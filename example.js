@@ -13,7 +13,7 @@ var members = [
    }
 ];
 
-console.log(members[0][name]);
+console.log(members[0]['name']);
 
 (async () => {
   const browser = await puppeteer.launch({ executablePath: '/usr/bin/chromium-browser' });
