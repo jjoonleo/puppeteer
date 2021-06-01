@@ -36,7 +36,7 @@ console.log(members[0][name]);
   await page.waitForTimeout(100);
   //choosing school
 
-  await page.type('#user_name_input',members[0][name],{ delay: 100 }); //enter name
+  await page.type('#user_name_input',members[0]['name'],{ delay: 100 }); //enter name
   await page.type('#birthday_input',members[0][birthday],{ delay: 100 });  //enter birthday
   await page.click('#btnConfirm');
 
